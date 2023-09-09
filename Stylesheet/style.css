@@ -1,0 +1,92 @@
+html {
+    background-color: rgb(241, 216, 245);
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 30px;
+}
+
+.cotainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "header"
+            "main";
+    margin: auto;
+}
+
+.site-header {
+    grid-area: header;
+    text-align: center;
+}
+
+.main-area {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-row: min-content repeat(2, auto);
+    grid-template-areas:
+            "image text1"
+            "text2 text2"
+            "text3 text4";
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+.image {
+    grid-area: image;
+    object-fit: contain;
+    width: 300px;
+    height : 400px;
+    text-align: center;
+    border: 1rem solid rgb(151, 104, 189);
+}
+
+.information {
+    grid-area: text1;
+    padding: 10px;
+}
+
+.personal {
+    grid-area: text2;
+    text-align: center;
+}
+
+.like {
+    grid-area: text3;
+    padding-left: 10px;
+    border: 2px dashed rgb(110, 70, 150);
+}
+
+.dislike {
+    grid-area: text4;
+    padding-left: 10px;
+    border: 2px dashed rgb(110, 70, 150);
+}
+
+h1 {
+    padding: 30px;
+    color : rgb(103, 55, 143);
+}
+
+h2 {
+    color : rgb(128, 88, 160);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.noinline {
+    padding-inline-start: 0px;
+}
+
+ul > li {
+    list-style: "🐾 ";
+    list-style-position: inside;
+}
